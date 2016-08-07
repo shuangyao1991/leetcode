@@ -14,9 +14,6 @@ import java.util.Set;
  */
 public class ContainsDuplicate217 {
     public boolean containsDuplicate(int[] nums) {
-        if (nums == null || nums.length == 0){
-            return false;
-        }
         Set<Integer> set = new HashSet<Integer>();
         for (int num : nums){
             if (set.contains(num)){
