@@ -16,7 +16,7 @@ public class MoveZeroes283 {
 
     public void moveZeroes(int[] nums){
         if (nums == null || nums.length <= 1) return;
-        
+
     }
 
 }
