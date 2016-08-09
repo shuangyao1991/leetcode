@@ -11,19 +11,14 @@ package number;
 public class PowerOdThree326 {
 
     public boolean isPowerOfThree(int n) {
-        if (n <= 0) return false;
-        if (n == 1 || n == 3) return true;
-        int sum = 0;
-        while (n > 0){
-            sum += n % 10;
-            n = n / 10;
-        }
-
-        return sum % 9 == 0;
+        return n > 0 && ((int)Math.pow(3, Math.round(Math.log(n) / Math.log(3)))) == n;
     }
 
     public static void main(String[] args){
         PowerOdThree326 instance = new PowerOdThree326();
-        System.out.println(instance.isPowerOfThree(27));
+        System.out.println(instance.isPowerOfThree(243));
+        System.out.println(Math.log(243));
+        System.out.println(Math.log(3));
+        System.out.println((Math.log(243) / Math.log(3)));
     }
 }
